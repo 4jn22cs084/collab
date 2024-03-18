@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define SIZE 4
+int s[SIZE],top=-1,i,j;
+push()
+{
+if(top==SIZE-1)
+{
+    printf("overflow\n");
+    return;
+}
+printf("enter the element");
+scanf("%d",&ele);
+top++;
+s[top]=ele;
+}
