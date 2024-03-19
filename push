@@ -13,3 +13,42 @@ scanf("%d",&ele);
 top++;
 s[top]=ele;
 }
+pop()
+{
+if(top==-1)
+{
+    printf("Underflow\n");
+    return;
+}
+printf("Deleted elements is %d",s[top]);
+top--;
+}
+display()
+{
+if(top==-1)
+{
+    printf("Underflow");
+    return;
+}
+for(i=0;i<=top;i++)
+    printf("%d",s[i]);
+}
+main()
+{
+    int ch;
+    printf("1.push\n2.pop\n3.display");
+    for(;;)
+    {
+        printf("Enter ur choice");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:push();
+                    break;
+            case 2:pop();
+                    break;
+            case 3:display();
+                    break;
+        }
+    }
+}
